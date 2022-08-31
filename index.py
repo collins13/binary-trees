@@ -5,7 +5,7 @@ class BinaryTree():
         self.right_child = None
     
     def get_right_child(self):
-        self.right_child
+        return self.right_child
     
     def get_left_child(self):
         return self.left_child
@@ -31,5 +31,23 @@ class BinaryTree():
             t = BinaryTree(new_node)
             t.right_child = self.right_child
             self.right_child = t
+            
+r = BinaryTree('a')
+print(r.get_root_val())
+print(r.get_left_child())
+print(r.get_right_child())
+
+# insert left child
+r.insert_left('b')
+print(r.get_left_child())
+print(r.get_left_child().get_root_val())
+
+# insert and print right child
+r.insert_right('c')
+print(r.get_right_child())
+print(r.get_right_child().get_root_val())
+r.get_right_child().set_root_val('hello')
+print(r.get_right_child().get_root_val())
+
     
     
